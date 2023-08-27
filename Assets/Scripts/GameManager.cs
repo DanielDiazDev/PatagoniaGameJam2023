@@ -5,22 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private Board[] _puzzleBoards; 
+    [SerializeField] private Board[] _puzzleBoards;
     private int _currentPuzzleIndex = 0;
     private bool _puzzleCompleted = false;
-    public static GameManager Instance { get; private set; }
+    // public static GameManager Instance { get; private set; }
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        //if (Instance == null)
+        //{
+        //    Instance = this;
+        //    DontDestroyOnLoad(gameObject);
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //    return;
+        //}
     }
     private void Start()
     {
@@ -31,7 +32,7 @@ public class GameManager : MonoBehaviour
     {
         if (_puzzleCompleted)
         {
-            _puzzleCompleted = false; 
+            _puzzleCompleted = false;
 
             DeactivatePuzzle(_currentPuzzleIndex);
             _currentPuzzleIndex = (_currentPuzzleIndex + 1) % _puzzleBoards.Length;

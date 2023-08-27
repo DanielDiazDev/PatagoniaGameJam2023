@@ -2,23 +2,32 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using Color = UnityEngine.Color;
 
 public class Board : MonoBehaviour
 {
     [SerializeField] private Transform _boardTransform;
     [SerializeField] private Piece _piecePrefab;
     [SerializeField] private int _size;
-    public GameObject clickableArea; // Asigna el GameObject vacío en el Inspector
-    public string messageToShow = "¡Hiciste clic en la zona!";
+    [SerializeField] private GameObject _imageComplete;
+    [SerializeField] private int clickCount;
+    [SerializeField] private int maxCount;
+    [SerializeField] private List<BoxCollider2D> colliders;
+    [SerializeField] private GameObject _button;
+    [SerializeField] private GameObject _textIntern;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private GameObject _targetText;
+    [SerializeField] private GameManager _gameManager;
+
     private List<Piece> _pieces;
     private int _emptyLocation;
-  //  private bool _shuffling;
 
     private void Start()
     {
         _pieces = new List<Piece>();
-
         CreatePieces(0.01f);
         Shuffle();
     }
@@ -26,17 +35,38 @@ public class Board : MonoBehaviour
     {
         if (CheckCompletion())
         {
-            //Aqui iria la funcion de tocar 
 
             foreach (Piece piece in _pieces)
             {
                 piece.gameObject.SetActive(false);
             }
-            GameManager.Instance.CompletePuzzle();
-           
+            _targetText.SetActive(true);
+            _imageComplete.SetActive(true);
+            if (Input.GetMouseButtonDown(0))
+            {
+                Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+                foreach (var collider in colliders)
+                {
+                    if (collider.OverlapPoint(mousePosition))
+                    {
+                        clickCount++;
+                        Debug.Log("Click Count: " + clickCount);
+                        collider.enabled = false;
+                        break;
+                    }
+                }
+                if (clickCount == maxCount)
+                {
+                    _imageComplete.SetActive(false);
+                    _textIntern.SetActive(true);
+                    _button.SetActive(true);
+
+                }
+            }
         }
 
-        
+
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -56,12 +86,32 @@ public class Board : MonoBehaviour
             }
         }
     }
+    public void ChangePuzzle()
+    {
+        _animator.enabled = true;
+        Invoke("FadeIn", 2);
+        _targetText.SetActive(false);
+        _imageComplete.SetActive(false);
+        _textIntern.SetActive(false);
+        _button.SetActive(false);
+        _animator.enabled = false;
+        //Agregar sonido al fade?
+        _gameManager.CompletePuzzle();
+
+    }
+    private void FadeIn()
+    {
+
+        _animator.Play("FadeIn");
+
+    }
+
 
     private void SwapPieces(int indexA, int indexB)
     {
         (_pieces[indexA], _pieces[indexB]) = (_pieces[indexB], _pieces[indexA]);
         (_pieces[indexA].transform.localPosition, _pieces[indexB].transform.localPosition) = (_pieces[indexB].transform.localPosition, _pieces[indexA].transform.localPosition);
-        _emptyLocation = indexA; 
+        _emptyLocation = indexA;
     }
     private void CreatePieces(float spaceBeetweenPieces)
     {
@@ -71,17 +121,17 @@ public class Board : MonoBehaviour
             for (int col = 0; col < _size; col++)
             {
                 var piece = Instantiate(_piecePrefab, _boardTransform);
-           
+
                 _pieces.Add(piece);
 
                 CalculateLocalPosition(piece, width, row, col);
                 piece.transform.localScale = ((2 * width) - spaceBeetweenPieces) * Vector3.one;
                 piece.name = $"{(row * _size) + col}";
-                if ((row == _size - 1) && col == _size - 1) 
+                if ((row == _size - 1) && col == _size - 1)
                 {
                     _emptyLocation = (_size * _size) - 1;
                     piece.gameObject.SetActive(false);
-                    
+
                 }
                 else
                 {
@@ -92,7 +142,7 @@ public class Board : MonoBehaviour
                     mesh.uv = uv;
 
                 }
-               
+
             }
         }
 
@@ -133,11 +183,11 @@ public class Board : MonoBehaviour
                 return false;
             }
         }
-       
+
 
         return true;
     }
-    
+
 
     private void Shuffle()
     {
@@ -168,29 +218,3 @@ public class Board : MonoBehaviour
     }
 
 }
-//if (Input.GetMouseButtonDown(0))
-//{
-//    RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-//    if (hit)
-//    {
-//        for (int i = 0; i < _pieces.Count; i++)
-//        {
-//            if (_pieces[i].transform == hit.transform)
-//            {
-
-//                if (SwapIfValid(i, -_size, _size)) { break; }
-//                if (SwapIfValid(i, +_size, _size)) { break; }
-//                if (SwapIfValid(i, -1, 0)) { break; }
-//                if (SwapIfValid(i, +1, _size - 1)) { break; }
-//            }
-
-//        }
-//    }
-//}
-
-//private IEnumerator WaitShuffle(float duration)
-//{
-//    yield return new WaitForSeconds(duration);
-//    Shuffle();
-//    _shuffling = false;
-//}
