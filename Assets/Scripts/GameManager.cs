@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     private bool _puzzleCompleted = false;
     // public static GameManager Instance { get; private set; }
 
+    public string music = "event:/MusicEvents/GameplayMusic/play_gameplay_music_112bpm";
+    FMOD.Studio.EventInstance musicEvent;
+
     private void Awake()
     {
         //if (Instance == null)
@@ -26,6 +29,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         ActivatePuzzle(_currentPuzzleIndex);
+        musicEvent = FMODUnity.RuntimeManager.CreateInstance(music);
+        musicEvent.start();
     }
 
     private void Update()
@@ -40,6 +45,7 @@ public class GameManager : MonoBehaviour
             {
                 // Todos los rompecabezas han sido completados, cambia de escena
                 SceneManager.LoadScene("End");
+                musicEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             }
             else
             {
@@ -51,6 +57,7 @@ public class GameManager : MonoBehaviour
     public void CompletePuzzle()
     {
         _puzzleCompleted = true;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/LevelComplete");
     }
 
     private void ActivatePuzzle(int index)
