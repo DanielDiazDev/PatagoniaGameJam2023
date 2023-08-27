@@ -9,11 +9,10 @@ public class Board : MonoBehaviour
     [SerializeField] private Transform _boardTransform;
     [SerializeField] private Piece _piecePrefab;
     [SerializeField] private int _size;
-    public GameObject clickableArea; // Asigna el GameObject vacío en el Inspector
+    public GameObject clickableArea; 
     public string messageToShow = "¡Hiciste clic en la zona!";
     private List<Piece> _pieces;
     private int _emptyLocation;
-  //  private bool _shuffling;
 
     private void Start()
     {
