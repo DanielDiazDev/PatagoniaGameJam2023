@@ -1,48 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6624524864357704573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/play_gameplay_music_112bpm/Gameplay Music 1 Layers
-  m_EditorClassIdentifier: 
-  Name: Gameplay Music 1 Layers
-  StudioPath: 
-  Min: 1
-  Max: 3
-  Default: 1
-  ID:
-    data1: 1409907392
-    data2: 3037838957
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &-5647988149363230863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/Music.bank
-  m_EditorClassIdentifier: 
-  Path: Build/Desktop/Music.bank
-  Name: Desktop/Music
-  StudioPath: bank:/Music
-  lastModified: 638287317037273544
-  FileSizes: []
-  Exists: 1
---- !u!114 &-3750942758562083744
+--- !u!114 &-8327884290363042006
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -66,71 +24,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-3658135733173272012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Build/Desktop/Master.strings.bank
-  Name: Desktop/Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638287317036617747
-  FileSizes:
-  - Name: 
-    Value: 1068
-  Exists: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: -3658135733173272012}
-  - {fileID: 1307786092416318551}
-  - {fileID: -5647988149363230863}
-  EditorEvents:
-  - {fileID: 7806667214061518193}
-  - {fileID: 7440283169588883757}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 1307786092416318551}
-  StringsBanks:
-  - {fileID: -3658135733173272012}
-  cacheTime: 638287317037273544
-  cacheVersion: 131603
---- !u!114 &1307786092416318551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Build/Desktop/Master.bank
-  Name: Desktop/Master
-  StudioPath: bank:/Master
-  lastModified: 638287317036598173
-  FileSizes: []
-  Exists: 1
---- !u!114 &6858986705256163964
+--- !u!114 &-6910748779767682289
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,7 +48,25 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &7440283169588883757
+--- !u!114 &-5647988149363230863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Build/Desktop/Music.bank
+  Name: Desktop/Music
+  StudioPath: bank:/Music
+  lastModified: 638287454055763775
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-3738223776440144283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,39 +76,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/MusicEvents/play_gameplay_music_112bpm
+  m_Name: event:/MusicEvents/MenuMusic/play_menu_music_70bpm
   m_EditorClassIdentifier: 
-  Path: event:/MusicEvents/play_gameplay_music_112bpm
-  Guid:
-    Data1: -976359265
-    Data2: 1230321998
-    Data3: 51397023
-    Data4: 1246351920
-  Banks:
-  - {fileID: -5647988149363230863}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -6624524864357704573}
-  - {fileID: 6858986705256163964}
-  - {fileID: -3750942758562083744}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 85714
---- !u!114 &7806667214061518193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/MusicEvents/play_menu_music_70bpm
-  m_EditorClassIdentifier: 
-  Path: event:/MusicEvents/play_menu_music_70bpm
+  Path: event:/MusicEvents/MenuMusic/play_menu_music_70bpm
   Guid:
     Data1: 649013789
     Data2: 1281868322
@@ -211,3 +93,249 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 13714
+--- !u!114 &-3658135733173272012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Build/Desktop/Master.strings.bank
+  Name: Desktop/Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638287454047266002
+  FileSizes:
+  - Name: 
+    Value: 1440
+  Exists: 1
+--- !u!114 &-2843873048789381985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX Events/SlidingPieces
+  m_EditorClassIdentifier: 
+  Path: event:/SFX Events/SlidingPieces
+  Guid:
+    Data1: -2111090073
+    Data2: 1082021455
+    Data3: -1576956499
+    Data4: 670807175
+  Banks:
+  - {fileID: 4751605827561126934}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 484
+--- !u!114 &-188332940710147758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/play_gameplay_music_112bpm/Gameplay Music 1 Layers
+  m_EditorClassIdentifier: 
+  Name: Gameplay Music 1 Layers
+  StudioPath: 
+  Min: 1
+  Max: 3
+  Default: 1
+  ID:
+    data1: 1409907392
+    data2: 3037838957
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -3658135733173272012}
+  - {fileID: 1307786092416318551}
+  - {fileID: -5647988149363230863}
+  - {fileID: 4751605827561126934}
+  EditorEvents:
+  - {fileID: -3738223776440144283}
+  - {fileID: 7068593804855937357}
+  - {fileID: 2952608794615120305}
+  - {fileID: 2508718543947744667}
+  - {fileID: -2843873048789381985}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 1307786092416318551}
+  StringsBanks:
+  - {fileID: -3658135733173272012}
+  cacheTime: 638287463938098673
+  cacheVersion: 131603
+--- !u!114 &1307786092416318551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Build/Desktop/Master.bank
+  Name: Desktop/Master
+  StudioPath: bank:/Master
+  lastModified: 638287454047222362
+  FileSizes: []
+  Exists: 1
+--- !u!114 &2508718543947744667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MusicEvents/CutsceneMusic/IntroCutsceneMusic/intro_cutscene_music_80bpm
+  m_EditorClassIdentifier: 
+  Path: event:/MusicEvents/CutsceneMusic/IntroCutsceneMusic/intro_cutscene_music_80bpm
+  Guid:
+    Data1: 1351135183
+    Data2: 1090697089
+    Data3: 1010184836
+    Data4: 1021489211
+  Banks:
+  - {fileID: -5647988149363230863}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 18750
+--- !u!114 &2952608794615120305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MusicEvents/GameplayMusic/play_gameplay_music_112bpm
+  m_EditorClassIdentifier: 
+  Path: event:/MusicEvents/GameplayMusic/play_gameplay_music_112bpm
+  Guid:
+    Data1: -976359265
+    Data2: 1230321998
+    Data3: 51397023
+    Data4: 1246351920
+  Banks:
+  - {fileID: -5647988149363230863}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -188332940710147758}
+  - {fileID: -6910748779767682289}
+  - {fileID: -8327884290363042006}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 85714
+--- !u!114 &4751605827561126934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Build/Desktop/SFX.bank
+  Name: Desktop/SFX
+  StudioPath: bank:/SFX
+  lastModified: 638287463938098673
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6651430293405690925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/play_outro_cutscene_music_80bpm/GameEnds
+  m_EditorClassIdentifier: 
+  Name: GameEnds
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2838784353
+    data2: 2019311079
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7068593804855937357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MusicEvents/CutsceneMusic/OutroCutsceneMusic/play_outro_cutscene_music_80bpm
+  m_EditorClassIdentifier: 
+  Path: event:/MusicEvents/CutsceneMusic/OutroCutsceneMusic/play_outro_cutscene_music_80bpm
+  Guid:
+    Data1: -556331472
+    Data2: 1255802323
+    Data3: 194372484
+    Data4: -889636284
+  Banks:
+  - {fileID: -5647988149363230863}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6651430293405690925}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 24000

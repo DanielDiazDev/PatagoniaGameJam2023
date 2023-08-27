@@ -61,7 +61,8 @@ public class Board : MonoBehaviour
     {
         (_pieces[indexA], _pieces[indexB]) = (_pieces[indexB], _pieces[indexA]);
         (_pieces[indexA].transform.localPosition, _pieces[indexB].transform.localPosition) = (_pieces[indexB].transform.localPosition, _pieces[indexA].transform.localPosition);
-        _emptyLocation = indexA; 
+        _emptyLocation = indexA;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/SlidingPieces");
     }
     private void CreatePieces(float spaceBeetweenPieces)
     {
