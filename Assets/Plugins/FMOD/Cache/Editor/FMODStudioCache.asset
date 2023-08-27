@@ -39,7 +39,7 @@ MonoBehaviour:
   Name: 'Gameplay Music 2 Layers '
   StudioPath: 
   Min: 1
-  Max: 3
+  Max: 2
   Default: 1
   ID:
     data1: 2691775141
@@ -191,6 +191,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-905652447996142459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MusicEvents/MenuMusic/play_menu_music_70bpm
+  m_EditorClassIdentifier: 
+  Path: event:/MusicEvents/MenuMusic/play_menu_music_70bpm
+  Guid:
+    Data1: 649013789
+    Data2: 1281868322
+    Data3: -1443064401
+    Data4: -345948347
+  Banks:
+  - {fileID: -5647988149363230863}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 13714
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,10 +308,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/MusicEvents/GameplayMusic/play_gameplay_music_112bpm
   Guid:
-    Data1: -976359265
-    Data2: 1230321998
-    Data3: 51397023
-    Data4: 1246351920
+    Data1: -556331472
+    Data2: 1255802323
+    Data3: 194372484
+    Data4: -889636284
   Banks:
   - {fileID: -5647988149363230863}
   IsStream: 1
