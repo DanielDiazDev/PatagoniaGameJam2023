@@ -39,7 +39,7 @@ MonoBehaviour:
   Name: 'Gameplay Music 2 Layers '
   StudioPath: 
   Min: 1
-  Max: 2
+  Max: 3
   Default: 1
   ID:
     data1: 2691775141
@@ -63,7 +63,7 @@ MonoBehaviour:
   Path: Build/Desktop/Music.bank
   Name: Desktop/Music
   StudioPath: bank:/Music
-  lastModified: 638287548373205003
+  lastModified: 638287612075350599
   FileSizes: []
   Exists: 1
 --- !u!114 &-3956736812525513386
@@ -135,7 +135,7 @@ MonoBehaviour:
   Path: Build/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638287486662908597
+  lastModified: 638287612074950604
   FileSizes:
   - Name: 
     Value: 1496
@@ -167,30 +167,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 484
---- !u!114 &-188332940710147758
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/play_gameplay_music_112bpm/Gameplay Music 1 Layers
-  m_EditorClassIdentifier: 
-  Name: Gameplay Music 1 Layers
-  StudioPath: 
-  Min: 1
-  Max: 3
-  Default: 1
-  ID:
-    data1: 1409907392
-    data2: 3037838957
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-905652447996142459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +194,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 13714
+--- !u!114 &-188332940710147758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/play_gameplay_music_112bpm/Gameplay Music 1 Layers
+  m_EditorClassIdentifier: 
+  Name: Gameplay Music 1 Layers
+  StudioPath: 
+  Min: 1
+  Max: 3
+  Default: 1
+  ID:
+    data1: 1409907392
+    data2: 3037838957
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ MonoBehaviour:
   - {fileID: 1307786092416318551}
   StringsBanks:
   - {fileID: -3658135733173272012}
-  cacheTime: 638287548373205003
+  cacheTime: 638287612075360594
   cacheVersion: 131603
 --- !u!114 &1307786092416318551
 MonoBehaviour:
@@ -264,7 +264,7 @@ MonoBehaviour:
   Path: Build/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 638287486662874173
+  lastModified: 638287612074940596
   FileSizes: []
   Exists: 1
 --- !u!114 &2508718543947744667
@@ -308,10 +308,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/MusicEvents/GameplayMusic/play_gameplay_music_112bpm
   Guid:
-    Data1: -556331472
-    Data2: 1255802323
-    Data3: 194372484
-    Data4: -889636284
+    Data1: -976359265
+    Data2: 1230321998
+    Data3: 51397023
+    Data4: 1246351920
   Banks:
   - {fileID: -5647988149363230863}
   IsStream: 1
@@ -339,7 +339,7 @@ MonoBehaviour:
   Path: Build/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 638287486664147831
+  lastModified: 638287612075360594
   FileSizes: []
   Exists: 1
 --- !u!114 &6651430293405690925
