@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Introduction : MonoBehaviour
 {
@@ -48,5 +49,9 @@ public class Introduction : MonoBehaviour
         _textInformaticMessage.text = "";
 
         ShowNextText();
+    }
+    public void GoToPuzzles()
+    {
+        SceneManager.LoadScene("Game");
     }
 }

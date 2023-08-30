@@ -303,7 +303,6 @@ MonoBehaviour:
   _targetText: {fileID: 1162394668}
   _gameManager: {fileID: 177562963}
   _fade: {fileID: 1945921946}
-  fadeDuration: 3
 --- !u!4 &3829682
 Transform:
   m_ObjectHideFlags: 0
@@ -388,7 +387,7 @@ MonoBehaviour:
   - {fileID: 3829681}
   _currentPuzzleIndex: 0
   _musics:
-  - MusicEvents/MenuMusic/play_menu_music_70bpm
+  - MusicEvents/GameplayMusic/play_gameplay_music_112bpm
   _gameObjectPaz: {fileID: 1169578217}
 --- !u!4 &177562964
 Transform:
@@ -583,7 +582,6 @@ MonoBehaviour:
   _targetText: {fileID: 188081698}
   _gameManager: {fileID: 177562963}
   _fade: {fileID: 1945921946}
-  fadeDuration: 3
 --- !u!4 &262350722
 Transform:
   m_ObjectHideFlags: 0
@@ -2036,7 +2034,6 @@ MonoBehaviour:
   _targetText: {fileID: 1797288194}
   _gameManager: {fileID: 177562963}
   _fade: {fileID: 1945921946}
-  fadeDuration: 3
 --- !u!4 &784170197
 Transform:
   m_ObjectHideFlags: 0
@@ -3140,7 +3137,6 @@ MonoBehaviour:
   _targetText: {fileID: 901738266}
   _gameManager: {fileID: 177562963}
   _fade: {fileID: 1945921946}
-  fadeDuration: 3
 --- !u!4 &1366247561
 Transform:
   m_ObjectHideFlags: 0
@@ -4488,7 +4484,6 @@ MonoBehaviour:
   _targetText: {fileID: 436220017}
   _gameManager: {fileID: 177562963}
   _fade: {fileID: 1945921946}
-  fadeDuration: 3
 --- !u!4 &1933340391
 Transform:
   m_ObjectHideFlags: 0
@@ -4914,7 +4909,6 @@ MonoBehaviour:
   _targetText: {fileID: 2022438720}
   _gameManager: {fileID: 177562963}
   _fade: {fileID: 1945921946}
-  fadeDuration: 3
 --- !u!4 &2075950283
 Transform:
   m_ObjectHideFlags: 0
