@@ -1,11 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Color = UnityEngine.Color;
 
 public class Board : MonoBehaviour
 {
@@ -18,9 +14,10 @@ public class Board : MonoBehaviour
     [SerializeField] private List<BoxCollider2D> colliders;
     [SerializeField] private GameObject _button;
     [SerializeField] private GameObject _textIntern;
-    [SerializeField] private Animator _animator;
     [SerializeField] private GameObject _targetText;
     [SerializeField] private GameManager _gameManager;
+    [SerializeField] private Image _fade;
+    private FMOD.Studio.EventInstance _instanceFmod;
 
     private List<Piece> _pieces;
     private int _emptyLocation;
@@ -30,44 +27,37 @@ public class Board : MonoBehaviour
         _pieces = new List<Piece>();
         CreatePieces(0.01f);
         Shuffle();
+        _instanceFmod = FMODUnity.RuntimeManager.CreateInstance("event:/SFX Events/SlidingPieces");
+
+
     }
     private void Update()
     {
         if (CheckCompletion())
         {
-
-            foreach (Piece piece in _pieces)
-            {
-                piece.gameObject.SetActive(false);
-            }
+            RemovePieces();
             _targetText.SetActive(true);
             _imageComplete.SetActive(true);
-            if (Input.GetMouseButtonDown(0))
-            {
-                Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-                foreach (var collider in colliders)
-                {
-                    if (collider.OverlapPoint(mousePosition))
-                    {
-                        clickCount++;
-                        Debug.Log("Click Count: " + clickCount);
-                        collider.enabled = false;
-                        break;
-                    }
-                }
-                if (clickCount == maxCount)
-                {
-                    _imageComplete.SetActive(false);
-                    _textIntern.SetActive(true);
-                    _button.SetActive(true);
-
-                }
-            }
+            ClickToTarget();
         }
+        MovePieces();
+
+    }
+    public void ChangePuzzle()
+    {
+        _targetText.SetActive(false);
+        _imageComplete.SetActive(false);
+        _textIntern.SetActive(false);
+        _button.SetActive(false);
 
 
+        //Agregar sonido al fade?
+        _gameManager.CompletePuzzle();
 
+    }
+
+    private void MovePieces()
+    {
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -86,24 +76,39 @@ public class Board : MonoBehaviour
             }
         }
     }
-    public void ChangePuzzle()
-    {
-        _animator.enabled = true;
-        Invoke("FadeIn", 2);
-        _targetText.SetActive(false);
-        _imageComplete.SetActive(false);
-        _textIntern.SetActive(false);
-        _button.SetActive(false);
-        _animator.enabled = false;
-        //Agregar sonido al fade?
-        _gameManager.CompletePuzzle();
 
+    private void ClickToTarget()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            foreach (var collider in colliders)
+            {
+                if (collider.OverlapPoint(mousePosition))
+                {
+                    clickCount++;
+                    Debug.Log("Click Count: " + clickCount);
+                    collider.enabled = false;
+                    break;
+                }
+            }
+            if (clickCount == maxCount)
+            {
+                _imageComplete.SetActive(false);
+                _textIntern.SetActive(true);
+                _button.SetActive(true);
+
+            }
+        }
     }
-    private void FadeIn()
+
+    private void RemovePieces()
     {
-
-        _animator.Play("FadeIn");
-
+        foreach (Piece piece in _pieces)
+        {
+            piece.gameObject.SetActive(false);
+        }
     }
 
 
@@ -113,8 +118,7 @@ public class Board : MonoBehaviour
         (_pieces[indexA].transform.localPosition, _pieces[indexB].transform.localPosition) = (_pieces[indexB].transform.localPosition, _pieces[indexA].transform.localPosition);
         _emptyLocation = indexA;
 
-        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX Events/SlidingPieces");
-
+        _instanceFmod.start();
     }
     private void CreatePieces(float spaceBeetweenPieces)
     {
