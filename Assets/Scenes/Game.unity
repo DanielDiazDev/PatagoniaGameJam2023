@@ -386,8 +386,6 @@ MonoBehaviour:
   - {fileID: 1933340390}
   - {fileID: 3829681}
   _currentPuzzleIndex: 0
-  _musics:
-  - MusicEvents/GameplayMusic/play_gameplay_music_112bpm
   _gameObjectPaz: {fileID: 1169578217}
 --- !u!4 &177562964
 Transform:
@@ -2667,7 +2665,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Encuentra al enemigo
+  m_text: Encuentra la paz
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4789,7 +4787,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Encuentra al enemigo
+  m_text: Encuentra a los aliados
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
